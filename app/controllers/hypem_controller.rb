@@ -14,7 +14,7 @@ attr_accessor :page_results, :flattened_page
             "color" => "green",
             "type" => "bar",
             "total" => false,
-            "refreshEveryNSeconds" => 60,
+            "refreshEveryNSeconds" => 30,
             "datapoints" => [
             { "title" => page_results['0']['title'], "value" => @page_results['0']['loved_count'] },
             { "title" => page_results['1']['title'], "value" => @page_results['1']['loved_count'] },
@@ -28,7 +28,7 @@ attr_accessor :page_results, :flattened_page
             "color" => "purple",
             "type" => "bar",
             "total" => false,
-            "refreshEveryNSeconds" => 60,
+            "refreshEveryNSeconds" => 30,
             "datapoints" => [
             { "title" => page_results['0']['title'], "value" => @page_results['0']['posted_count'] },
             { "title" => page_results['1']['title'], "value" => @page_results['1']['posted_count'] },
@@ -44,7 +44,3 @@ attr_accessor :page_results, :flattened_page
     render :json => @jsondata
  end 
 end
-
-  # def find_daft_punk
-  #  @flattened_page = @page_results
-  # end
