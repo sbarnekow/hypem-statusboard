@@ -2,14 +2,23 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
+group :production do 
+  gem "pg"
+end
+
 group :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '2.6.1'
   gem 'simplecov'
 end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+
+group :development do
+  gem 'rspec-rails', '2.6.1'
+  gem 'sqlite3'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
